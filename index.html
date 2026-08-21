@@ -18,20 +18,28 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+>
 
+<noscript>
     <link
+        rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+    >
+</noscript>
+
+    <link
         rel="stylesheet"
+        href="./assets/bootstrap/purged/bootstrap.min.css"
     >
 
     <link
         rel="stylesheet"
-        href="./assets/bootstrap/bootstrap.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="./assets/style.css"
+        href="./assets/style.min.css"
     >
 </head>
 
@@ -121,28 +129,57 @@
 
                 <div class="carousel-inner">
 
+                    <!-- Image LCP : PAS de loading="lazy" -->
                     <div class="carousel-item active">
+
                         <img
                             src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
+                            srcset="
+                                ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-640.webp 640w,
+                                ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1024.webp 1024w,
+                                ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-1280.webp 1280w,
+                                ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp 1920w
+                            "
+                            sizes="100vw"
                             class="d-block w-100"
                             alt="Personne marchant dans une rue urbaine"
+                            fetchpriority="high"
                         >
+
                     </div>
 
                     <div class="carousel-item">
+
                         <img
-                            src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp"
+                            src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1024.webp"
+                            srcset="
+                                ./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-640.webp 640w,
+                                ./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1024.webp 1024w
+                            "
+                            sizes="100vw"
                             class="d-block w-100"
                             alt="Public assistant à un concert"
+                            loading="lazy"
+                            decoding="async"
                         >
+
                     </div>
 
                     <div class="carousel-item">
+
                         <img
-                            src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp"
+                            src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1024.webp"
+                            srcset="
+                                ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-640.webp 640w,
+                                ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash-1024.webp 1024w
+                            "
+                            sizes="100vw"
                             class="d-block w-100"
                             alt="Mariés partageant un moment de complicité"
+                            loading="lazy"
+                            decoding="async"
                         >
+
                     </div>
 
                 </div>
@@ -189,11 +226,19 @@
         <section id="about">
 
             <div class="picture left">
+
                 <img
-                    src="./assets/images/nina.png"
+                    src="./assets/images/nina-640.webp"
+                    srcset="
+                        ./assets/images/nina-640.webp 640w,
+                        ./assets/images/nina.webp 800w
+                    "
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     alt="Portrait de Nina Carducci, photographe professionnelle"
                     loading="lazy"
+                    decoding="async"
                 >
+
             </div>
 
             <div id="about-me">
@@ -239,76 +284,138 @@
 
                 <div class="gallery" style="display: none">
 
+                    <!-- Concert -->
                     <img
                         data-gallery-tag="Concert"
                         class="gallery-item"
-                        src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
+                        src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-1024.webp"
+                        srcset="
+                            ./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-640.webp 640w,
+                            ./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         alt="Chanteur se produisant sur scène pendant un concert"
                         loading="lazy"
+                        decoding="async"
                     >
 
+                    <!-- Entreprise -->
                     <img
                         data-gallery-tag="Entreprises"
                         class="gallery-item"
-                        src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"
+                        src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-1024.webp"
+                        srcset="
+                            ./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-640.webp 640w,
+                            ./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         alt="Portrait professionnel d'un dirigeant d'entreprise"
                         loading="lazy"
+                        decoding="async"
                     >
 
                     <img
                         data-gallery-tag="Entreprises"
                         class="gallery-item"
-                        src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp"
+                        src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-1024.webp"
+                        srcset="
+                            ./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-640.webp 640w,
+                            ./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         alt="Équipe travaillant ensemble pendant une réunion"
                         loading="lazy"
+                        decoding="async"
                     >
 
+                    <!-- Mariage -->
                     <img
                         data-gallery-tag="Mariages"
                         class="gallery-item"
-                        src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp"
+                        src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-1024.webp"
+                        srcset="
+                            ./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-640.webp 640w,
+                            ./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         alt="Couple de mariés se tenant la main"
                         loading="lazy"
+                        decoding="async"
                     >
 
+                    <!-- Portrait -->
                     <img
                         data-gallery-tag="Portrait"
                         class="gallery-item"
-                        src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp"
+                        src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-1024.webp"
+                        srcset="
+                            ./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-640.webp 640w,
+                            ./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         alt="Portrait artistique d'un homme"
                         loading="lazy"
+                        decoding="async"
                     >
 
+                    <!-- Mariage -->
                     <img
                         data-gallery-tag="Mariages"
                         class="gallery-item"
-                        src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"
+                        src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-1024.webp"
+                        srcset="
+                            ./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-640.webp 640w,
+                            ./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         alt="Mariés échangeant un baiser pendant leur cérémonie"
                         loading="lazy"
+                        decoding="async"
                     >
 
+                    <!-- Portrait -->
                     <img
                         data-gallery-tag="Portrait"
                         class="gallery-item"
-                        src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp"
+                        src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-1024.webp"
+                        srcset="
+                            ./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-640.webp 640w,
+                            ./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         alt="Portrait artistique d'une femme"
                         loading="lazy"
+                        decoding="async"
                     >
 
+                    <!-- Concert -->
                     <img
                         data-gallery-tag="Concert"
                         class="gallery-item"
-                        src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"
+                        src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-1024.webp"
+                        srcset="
+                            ./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-640.webp 640w,
+                            ./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         alt="Musicien jouant de la guitare pendant un concert"
                         loading="lazy"
+                        decoding="async"
                     >
 
+                    <!-- Entreprise -->
                     <img
                         data-gallery-tag="Entreprises"
                         class="gallery-item"
-                        src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp"
+                        src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-1024.webp"
+                        srcset="
+                            ./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-640.webp 640w,
+                            ./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         alt="Femme travaillant dans un environnement professionnel"
                         loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -515,9 +622,15 @@
                 <div class="picture right">
 
                     <img
-                        src="./assets/images/camera.png"
+                        src="./assets/images/camera-1024.webp"
+                        srcset="
+                            ./assets/images/camera-640.webp 640w,
+                            ./assets/images/camera-1024.webp 1024w
+                        "
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         alt="Appareil photo professionnel"
                         loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -528,8 +641,8 @@
 
     </main>
 
-    <!-- Les scripts sont chargés à la fin pour ne pas bloquer la page -->
-    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+    <!-- Scripts -->
+    <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
 
     <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -537,8 +650,8 @@
         crossorigin="anonymous"
     ></script>
 
-    <script src="./assets/maugallery.js"></script>
-    <script src="./assets/scripts.js"></script>
+    <script src="./assets/maugallery.min.js"></script>
+    <script src="./assets/scripts.min.js"></script>
 
 </body>
 
